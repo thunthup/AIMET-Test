@@ -1,0 +1,143 @@
+{
+	"info": {
+		"_postman_id": "d5e1ac0d-3284-44cd-a666-b255a4f18ddb",
+		"name": "Calendar test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23906212"
+	},
+	"item": [
+		{
+			"name": "List Events",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/events?start_date=2011-01-01&end_date=2100-12-31&keyword=a&sort_order=desc",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"events"
+					],
+					"query": [
+						{
+							"key": "start_date",
+							"value": "2011-01-01"
+						},
+						{
+							"key": "end_date",
+							"value": "2100-12-31"
+						},
+						{
+							"key": "keyword",
+							"value": "a"
+						},
+						{
+							"key": "year",
+							"value": "2020",
+							"disabled": true
+						},
+						{
+							"key": "month",
+							"value": "05",
+							"disabled": true
+						},
+						{
+							"key": "sort_order",
+							"value": "desc"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create event",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"postman4\",\n    \"event_date\": \"4000-07-03\",\n    \"start_time\": \"01:35:00+07\",\n    \"end_time\": \"12:36:00+07\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/api/events",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"events"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Event by ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update event",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete event",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "host",
+			"value": "localhost:8000",
+			"type": "string"
+		}
+	]
+}
