@@ -62,6 +62,13 @@ To run tests, run the following command
 ```
 
 
+## Architecture
+
+![App Screenshot](https://github.com/thunthup/AIMET-Test/blob/main/Architecture.png?raw=true)
+
+## Database schema
+
+![App Screenshot](https://github.com/thunthup/AIMET-Test/blob/main/Event%20Schema.png?raw=true)
 ## API Reference
 
 #### Get events with filters
