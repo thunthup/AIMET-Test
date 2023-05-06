@@ -6,10 +6,10 @@ import (
 )
 
 func EventRoute(router *gin.Engine) {
-	router.GET("/events", controllers.ListEvents)
-	router.GET("/events/:id", controllers.GetEventById)
-	router.POST("/events", controllers.CreateEvent)
-	router.PUT("/events/:id", controllers.UpdateEvent)
-	router.DELETE("/events/:id", controllers.DeleteEvent)
+	router.GET("/api/events", controllers.ListEvents)
+	router.GET("/api/events/:id", controllers.GetEventById)
+	router.POST("/api/events", controllers.CreateEvent)
+	router.PUT("/api/events/:id", controllers.UpdateEvent)
+	router.DELETE("/api/events/:id", controllers.DeleteEvent)
 
 }
