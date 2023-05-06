@@ -21,7 +21,7 @@ func GetEventById(c *gin.Context) {
 		return
 	}
 
-	eventDate, _ := time.Parse("2020-05-28T00:00:00Z", event.EventDate)
+	eventDate, _ := time.Parse(time.RFC3339, event.EventDate)
 
 	event.EventDate = eventDate.Format("2006-01-02")
 
@@ -172,10 +172,10 @@ func ListEvents(c *gin.Context) {
 		return
 	}
 
-	// for i := range events {
-	// 	tempEventDate, _ := time.Parse("2020-05-28T00:00:00Z", events[i].EventDate)
-	// 	events[i].EventDate = tempEventDate.Format("2006-01-02")
-	// }
+	for i := range events {
+		tempEventDate, _ := time.Parse(time.RFC3339, events[i].EventDate)
+		events[i].EventDate = tempEventDate.Format("2006-01-02")
+	}
 
 	c.JSON(http.StatusOK, events)
 }

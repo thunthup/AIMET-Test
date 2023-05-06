@@ -8,8 +8,14 @@ import (
 	"github.com/joho/godotenv"
 )
 
-func LoadEnvVar() {
-	err := godotenv.Load("../.env")
+func LoadEnvVar(path *string) {
+	var err error
+	if path == nil {
+		path = new(string)
+		*path = ".env"
+	}
+	err = godotenv.Load(*path)
+
 	if err != nil {
 		log.Fatalf("Error while reading config file %s", err)
 	}

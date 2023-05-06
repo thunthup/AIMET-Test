@@ -10,7 +10,7 @@ import (
 )
 
 func init() {
-	configs.LoadEnvVar()
+	configs.LoadEnvVar(nil)
 	configs.ConnectPostgresDB()
 }
 
