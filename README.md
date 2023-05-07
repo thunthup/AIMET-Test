@@ -24,6 +24,12 @@ Install dependencies
   go mod download
 ```
 
+create .env from template.env
+
+```bash
+  cp template.env .env
+```
+
 Start PostgreSQL database
 
 ```bash
